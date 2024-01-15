@@ -16,8 +16,16 @@ fi
 function dailyWage(){
 wagePerHour=20
 fullDayHour=8
-empDailyWage=$wagePerHour*$fullDayHour
+empDailyWage=$(($wagePerHour*$fullDayHour))
 echo "Daily wage of employee is $empDailyWage"
+}
+
+
+function partTimeWage(){
+wagePerHour=20
+partTimeHour=8
+empPartTimeWage=$(($wagePerHour*$partTimeHour))
+echo "Part time wage of the emloyee is $empPartTimeWage"
 }
 
 echo "enter your choice 1-attendence, 2-daily wage, 3-part time wage, 4-wage for a month, 5-wages total working hours" 
@@ -33,6 +41,7 @@ case  $choice in
 	;;
 
 	3)
+	partTimeWage
 	;;
 
 	4)
