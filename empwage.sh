@@ -1,4 +1,8 @@
 
+wagePerHour=20
+fullDayHour=8
+empDailyWage=$(($wagePerHour*$fullDayHour))
+
 
 function attendence () {
 isPresent=1
@@ -28,6 +32,12 @@ empPartTimeWage=$(($wagePerHour*$partTimeHour))
 echo "Part time wage of the emloyee is $empPartTimeWage"
 }
 
+function monthlyWage(){
+workingDays=20
+empMonthlyWage=$(($workingDays*empDailyWage))
+echo "Monthly wage of employee is $empMonthlyWage"
+}
+
 echo "enter your choice 1-attendence, 2-daily wage, 3-part time wage, 4-wage for a month, 5-wages total working hours" 
 read choice
 
@@ -45,6 +55,7 @@ case  $choice in
 	;;
 
 	4)
+	monthlyWage
 	;;
 
 	5)
