@@ -38,6 +38,15 @@ empMonthlyWage=$(($workingDays*empDailyWage))
 echo "Monthly wage of employee is $empMonthlyWage"
 }
 
+function totalWorkingHours(){
+totalHours=100
+totalDays=20
+wageByHour=$(($totalHours*$wagePerHour))
+wageByDays=$(($totalDays*$empDailyWage))
+echo "wages for 100 hours is $wageByHour"
+echo "wages for 20 days is $wageByDays"
+}
+
 echo "enter your choice 1-attendence, 2-daily wage, 3-part time wage, 4-wage for a month, 5-wages total working hours" 
 read choice
 
@@ -59,6 +68,7 @@ case  $choice in
 	;;
 
 	5)
+	totalWorkingHours
 	;;
 
 	*)
